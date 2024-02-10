@@ -5,20 +5,24 @@
 </ion-header>
 
 <ion-content class="ion-padding">
-  <form [formGroup]="creationAdForm" (ngSubmit)="onSubmit()">
-    <ion-select formControlName="modeleId" label="Catégorie" label-placement="floating" fill="outline">
-      <ion-select-option *ngFor="let model of categories" [value]="model.id">{{ model.nom }}</ion-select-option>
-    </ion-select>
+  <ion-card>
+    <ion-card-content class="ion-text-center">
+      <form [formGroup]="creationAdForm" (ngSubmit)="onSubmit()">
+        <ion-select formControlName="modeleId" label="Catégorie" label-placement="floating" fill="outline">
+          <ion-select-option *ngFor="let model of categories" [value]="model.id">{{ model.nom }}</ion-select-option>
+        </ion-select>
 
-    <ion-select formControlName="marqueId" interface="popover" label="Marque" label-placement="floating" fill="outline">
-      <ion-select-option *ngFor="let brand of brands" [value]="brand.id">{{ brand.nom }}</ion-select-option>
-    </ion-select>
+        <ion-select formControlName="marqueId" interface="popover" label="Marque" label-placement="floating" fill="outline">
+          <ion-select-option *ngFor="let brand of brands" [value]="brand.id">{{ brand.nom }}</ion-select-option>
+        </ion-select>
 
-    <ion-input formControlName="prix" type="number" required label="Prix" label-placement="floating" fill="outline"></ion-input>
-    <ion-input formControlName="kilometrage" type="number" required label="Kilometrage" label-placement="floating" fill="outline"></ion-input>
-    <ion-input formControlName="annee" type="number" required label="Année" label-placement="floating" fill="outline"></ion-input>
-    <ion-textarea formControlName="description" required label="Description" labelPlacement="floating" fill="outline" placeholder="Enter la description de votre voiture"></ion-textarea>
-    <input type="file" (change)="onChange($event)" multiple />
-    <ion-button expand="full" type="submit">Créer Annonce</ion-button>
-  </form>
+        <ion-input formControlName="prix" type="number" required label="Prix" label-placement="floating" fill="outline"></ion-input>
+        <ion-input formControlName="kilometrage" type="number" required label="Kilometrage" label-placement="floating" fill="outline"></ion-input>
+        <ion-input formControlName="annee" type="number" required label="Année" label-placement="floating" fill="outline"></ion-input>
+        <ion-textarea formControlName="description" required label="Description" labelPlacement="floating" fill="outline" placeholder="Enter la description de votre voiture"></ion-textarea>
+        <input type="file" (change)="onChange($event)" multiple />
+        <ion-button expand="full" type="submit">Créer Annonce</ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
