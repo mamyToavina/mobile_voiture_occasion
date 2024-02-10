@@ -1,0 +1,33 @@
+<div class="background-container">
+  <div class="container">
+    <h2>En attente de validation</h2>
+
+  <div *ngFor="let ad of ads">
+    <div class="card">
+      <div class="card-header">
+        Demandé le: {{ formatDate(ad.dateDemande) }}
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Categorie: {{ ad.modele.nom }}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Marque: {{ ad.marque.nom }}</h6>
+        <p class="card-text">Anée: {{ ad.annee }}</p>
+        <p class="card-text">Kilometrage: {{ ad.kilometrage }}</p>
+        <p class="card-text">Prix: {{ ad.prix }}</p>
+        <img *ngIf="ad.images.length > 0" [src]="ad.images[0].chemin" alt="Image de l'annonce" class="ad-image">
+        <img *ngIf="ad.images.length === 0" src="assets/image/fonds_liste.jpg" alt="Image par défaut" class="ad-image">
+        <!-- Ajoutez d'autres détails de l'annonce si nécessaire -->
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="ads.length === 0">
+    <p>Aucune annonce à afficher.</p>
+  </div>
+
+  <div *ngIf="totalPages > 1" class="pagination">
+    <button *ngFor="let pageNumber of totalPagesArray" [class.active]="pageNumber === page" (click)="onPageChange(pageNumber)">
+      {{ pageNumber }}
+    </button>
+  </div>
+  </div>
+</div>

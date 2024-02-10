@@ -1,0 +1,66 @@
+<!--<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Inscription
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+      <ion-input formControlName="name" required label="Nom" label-placement="floating" fill="outline" placeholder="Votre nom"></ion-input>
+ 
+      <ion-input formControlName="username" required label="username" label-placement="floating" fill="outline" placeholder="Votre pseudo"></ion-input>
+
+      <ion-input email formControlName="email" required label="Email" label-placement="floating" fill="outline" placeholder="Votre mail"></ion-input>
+    
+      <ion-input type="password" formControlName="password" required label="Votre mot de passe" label-placement="floating" fill="outline" placeholder="Mot de passe"></ion-input>
+
+      <ion-input type="file"  multiple accept="image/*"></ion-input>!
+
+    <ion-button expand="full" type="submit" [disabled]="!registrationForm.valid">S'inscrire</ion-button>
+  </form>
+</ion-content>-->
+
+<ion-content class="bg-image">
+  <ion-card class="ion-padding">
+    <ion-card-content class="ion-text-center">
+      <ion-card-title>Create An Account</ion-card-title>
+      <ion-card-subtitle>Enter your details below to create your account</ion-card-subtitle>
+
+      <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+        <div class="input-box">
+          <ion-item lines="none">
+            <ion-icon slot="start" name="person"></ion-icon>
+            <ion-input formControlName="name" type="text" placeholder="Nom" class="input-style"></ion-input>
+          </ion-item>
+        </div>
+        <div class="input-box">
+          <ion-item lines="none">
+            <ion-icon slot="start" name="person"></ion-icon>
+            <ion-input formControlName="username" type="text" placeholder="Prénom" class="input-style"></ion-input>
+          </ion-item>
+        </div>
+        <div class="input-box">
+          <ion-item lines="none">
+            <ion-icon slot="start" name="mail"></ion-icon>
+            <ion-input formControlName="email" type="email" placeholder="Email" class="input-style"></ion-input>
+          </ion-item>
+        </div>
+        <div class="input-box">
+          <ion-item lines="none">
+            <ion-icon slot="start" name="lock-closed"></ion-icon>
+            <ion-input formControlName="password" type="password" placeholder="Mot de passe" class="input-style"></ion-input>
+          </ion-item>
+        </div>
+
+        <ion-button expand="full" type="submit" [disabled]="!registrationForm.valid" class="sign-btn" shape="round">Sign Up</ion-button>
+      </form>
+
+      <div class="text-tag">
+        <span>Already have an account? <a href="login" class="link-style">Sign In</a></span>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+

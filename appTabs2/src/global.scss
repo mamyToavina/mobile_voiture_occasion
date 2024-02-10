@@ -1,0 +1,203 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+ion-content{
+    --ion-background-color: transparent;
+    --ion-item-background: transparent !important;
+  }
+  
+  .bg-color{
+    background: #E1EAF9;
+  }
+  
+  ion-header{
+    position: absolute;
+  }
+  
+  ion-toolbar{
+    --ion-background-color:transparent;
+    --opacity:0;
+  }
+  
+  ion-card{
+    --ion-background-color:transparent;
+      box-shadow: none !important;
+      background-color: transparent !important;
+  }
+  
+   ion-card-title{
+     margin-top: 50px !important;
+     font-size: 25px;
+     color: #53565A;
+     font-weight: 600;
+     text-align: center;
+  
+   }
+  
+   ion-card-subtitle{
+     text-align: center;
+     padding-top: 15px !important;
+     font-size: 13px;
+     color: #888C91;
+     font-weight: 400;
+     text-transform: none;
+     padding: 0 30px;
+   }
+  
+  ion-card-content{
+    padding-top: 30px;
+  }
+   ion-item{
+     color:#74787E;
+      --border-color:#D4D7DB;
+  
+     --highlight-color-focused:#215AB7;
+     --padding-start:0;
+     --inner-padding-end:0;
+     --highlight-color-invalid: #215AB7;
+     --highlight-color-valid: #215AB7;
+     
+     font-size: 13px;
+     ion-input{
+       color:#74787E;
+       font-size: 13px;
+       ion-icon{
+         padding-right: 6px;
+         font-size: 18px;
+       }
+     }
+  
+     ion-input:hover{
+       color:#215AB7;
+  
+     }
+  
+  
+   }
+  
+   .sign-btn-wrap{
+      text-align: center;
+      padding-top: 45px;
+     .sign-btn{
+       --ion-primary-color:#215AB7;
+       --background:#215AB7;
+       --background-activated:#E1EAF9;
+       --background-focused:#E1EAF9;
+       --background-hover:#647B9D;
+       color:#F4F6FA;
+       background-color: #215AB7;
+       border-radius: 25px;
+  
+     }
+   }
+  
+   .input-box {
+    margin-bottom: 30px; /* Espacement entre chaque boîte de saisie */
+    border-radius: 10px; /* Coins arrondis */
+    border: 1px solid transparent; /* Bordure transparente */
+    padding: 10px; /* Espacement intérieur */
+    height: 50px; /* Hauteur de chaque boîte de saisie */
+    display: flex;
+    align-items: center; /* Centrer verticalement */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre portée */
+    background-color: rgba(255, 255, 255, 0.926); /* Couleur de fond avec transparence */
+  }
+  
+  .input-box:last-child {
+    margin-bottom: 0; /* Supprime l'espacement pour la dernière boîte de saisie */
+  }
+  
+  .input-box ion-input {
+    line-height: 25px; /* Moitié de la hauteur de la boîte */
+    margin-left: 0px; /* Espacement entre l'icône et le texte */
+    background-color: transparent; /* Rendre le champ de saisie transparent */
+  }
+  
+   .text-tag{
+     margin-top: 35px;
+     text-align: center;
+     color: rgba(255, 255, 255, 0.7);   
+     span{
+       font-size: 13px;
+       font-weight: normal;
+       color:#334862;
+     }
+   }
+  
+   .social-btns{
+     margin-top: 18px;
+     text-align: center;
+     ion-button{
+       width:30px;
+       padding-left: 5px !important;
+     }
+   }
+  
+   .error_message{
+     font-size: 6px;
+     font-weight:200;
+     color: #913e07;
+   }
+   
+   .bg-image {
+    --background: url('/assets/image/voiture1.jpg'); /* Chemin de votre image de fond */
+    --background-size: 720px 1440px;
+    background-color: rgba(255, 255, 255, 0.5); /* Couleur de fond avec transparence */
+  }
+  
+  .link-style {
+    color: rgba(255, 255, 255, 0.7); /* Couleur de texte avec transparence */
+  }
+  
+.bg-image ion-card-subtitle,
+.bg-image .input-style::placeholder,
+.bg-image .link-style {
+  color: white; /* Changer la couleur du texte en blanc */
+}
+/* Ajoutez ceci à votre fichier SCSS */
+.bg-image .text-tag span {
+    color: white; /* Changer la couleur du texte en blanc */
+  }
+
+  /* Ajoutez ceci à votre fichier SCSS */
+.bg-image ion-card-subtitle {
+    margin-bottom: 10px; /* Ajouter un espacement de 10px en bas du texte */
+  }
+  
+  /* Ajoutez ceci à votre fichier SCSS */
+.bg-image .input-box ion-item {
+    display: flex;
+    align-items: center; /* Centrer les éléments verticalement */
+  }
+  
+  .bg-image .input-box ion-item ion-icon {
+    margin-right: 10px; /* Ajouter un espacement à droite de l'icône */
+  }
+  
+  .bg-image .input-box ion-item ion-input {
+    flex: 1; /* Faire en sorte que l'input occupe tout l'espace disponible */
+  }

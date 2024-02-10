@@ -1,0 +1,41 @@
+<ion-content class="bg-image">
+  <ion-card class="ion-padding">
+    <ion-card-content class="ion-text-center">
+      <ion-card-title>Create An Account</ion-card-title>
+      <ion-card-subtitle>Enter your details below to create your account</ion-card-subtitle>
+
+      <form>
+        <div class="input-box">
+          <ion-item lines="none">
+            <ion-icon slot="start" name="person"></ion-icon>
+            <ion-input formControlName="name" type="text" placeholder="Nom" class="input-style"></ion-input>
+          </ion-item>
+        </div>
+        <div class="input-box">
+          <ion-item lines="none">
+            <ion-icon slot="start" name="person"></ion-icon>
+            <ion-input formControlName="username" type="text" placeholder="Prénom" class="input-style"></ion-input>
+          </ion-item>
+        </div>
+        <div class="input-box">
+          <ion-item lines="none">
+            <ion-icon slot="start" name="mail"></ion-icon>
+            <ion-input formControlName="email" type="email" placeholder="Email" class="input-style"></ion-input>
+          </ion-item>
+        </div>
+        <div class="input-box">
+          <ion-item lines="none">
+            <ion-icon slot="start" name="lock-closed"></ion-icon>
+            <ion-input formControlName="password" type="password" placeholder="Mot de passe" class="input-style"></ion-input>
+          </ion-item>
+        </div>
+
+        <ion-button expand="block" class="sign-btn" shape="round">Sign Up</ion-button>
+      </form>
+
+      <div class="text-tag">
+        <span>Already have an account? <a href="login" class="link-style">Sign In</a></span>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
