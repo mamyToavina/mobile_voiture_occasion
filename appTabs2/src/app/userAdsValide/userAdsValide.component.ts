@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserAdsValideService } from './userAdsValide.service';
+import { AppConstant } from '../AppConstant';
 
 @Component({
   selector: 'app-userAdsValide',
@@ -8,7 +9,7 @@ import { UserAdsValideService } from './userAdsValide.service';
 })
 export class UserAdsValideComponent implements OnInit {
 
-  userId = 1;
+  userId: any = AppConstant.userId;
   status = 2;
   page = 1;
   ads: any[] = [];

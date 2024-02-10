@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserAdsVenduService } from './userAdsVendu.service';
+import { AppConstant } from '../AppConstant';
 
 @Component({
   selector: 'app-userAdsVendu',
@@ -8,7 +9,7 @@ import { UserAdsVenduService } from './userAdsVendu.service';
 })
 export class UserAdsVenduComponent implements OnInit {
 
-  userId = 1;
+  userId: any = AppConstant.userId;
   status = 3;
   page = 1;
   ads: any[] = [];

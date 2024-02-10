@@ -1,0 +1,50 @@
+/* Styles pour la page */
+ion-content {
+    --background: transparent; /* Couleur de fond */
+    background-image: url('/assets/image/Voiture1.jpeg'); /* Image de fond */
+    background-size: cover; /* Ajuster la taille de l'image */
+    background-position: center; /* Centrer l'image */
+  }
+  
+  /* Autres styles restent inchangés */
+  .custom-button {
+    background-color: #4a90e2; /* Couleur de fond */
+    color: #fff; /* Couleur du texte */
+    font-weight: bold;
+    padding: 12px 24px; /* Espacement interne */
+    border: none; /* Supprimer la bordure */
+    border-radius: 8px; /* Coins arrondis */
+    margin-bottom: 16px; /* Marge en bas */
+    transition: background-color 0.3s ease; /* Transition pour le changement de couleur de fond */
+  }
+  
+  .custom-button:hover {
+    background-color: #007acc; /* Couleur de fond au survol */
+  }
+  
+  .custom-button:active {
+    transform: translateY(1px); /* Effet de décalage vers le bas au clic */
+  }
+  
+  /* Centrer verticalement et horizontalement les boutons */
+  .flex {
+    display: flex;
+  }
+  
+  .flex-col {
+    flex-direction: column;
+  }
+  
+  .justify-center {
+    justify-content: center;
+  }
+  
+  .items-center {
+    align-items: center;
+  }
+  
+  .h-full {
+    height: 100%;
+  }
+  
+  

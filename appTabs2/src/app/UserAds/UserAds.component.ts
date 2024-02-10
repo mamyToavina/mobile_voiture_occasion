@@ -9,7 +9,7 @@ import { UserAdsService } from './userAds.service';
 })
 export class UserAdsComponent implements OnInit {
 
-  userId = 1;
+  userId: any = AppConstant.userId;
   status = 1;
   page = 1;
   ads: any[] = [];

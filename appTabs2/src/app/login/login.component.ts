@@ -15,8 +15,8 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.formLogin = this.fb.group({
-      username : this.fb.control(""),
-      password : this.fb.control("")
+      username : this.fb.control("admin"),
+      password : this.fb.control("admin")
     })
   }
 
@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
         console.log('Login success:', data);
         console.log('id_user', this.loginService.id);
         this.loginService.load_profile(data);
-        this.router.navigateByUrl("/admin");
+        this.router.navigateByUrl("/navigation");
       },
       error : err => {
         console.error('Login error:', err);

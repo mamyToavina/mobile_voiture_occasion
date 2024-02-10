@@ -6,6 +6,7 @@ import { AdComponent } from './ad/ad.component';
 import { UserAdsComponent } from './UserAds/UserAds.component';
 import { UserAdsValideComponent } from './userAdsValide/userAdsValide.component';
 import { UserAdsVenduComponent } from './userAdsVendu/userAdsVendu.component';
+import { NavigationComponent } from './Navigation/Navigation.component';
 
 const routes: Routes = [
   {
@@ -15,6 +16,10 @@ const routes: Routes = [
   {
     path: 'registration',
     component: RegistrationComponent
+  },
+  {
+    path: 'navigation',
+    component: NavigationComponent
   },
   {
     path: 'login',

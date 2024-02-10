@@ -26,7 +26,7 @@
       <ion-card-title>Login An Account</ion-card-title>
       <ion-card-subtitle>Enter your details below to your account</ion-card-subtitle>
 
-      <form  [formGroup]="formLogin" (ngSubmit) = "submit_login()">
+      <form [formGroup]="formLogin" (ngSubmit)="submit_login()">
         <div class="input-box">
           <ion-item lines="none">
             <ion-icon slot="start" name="person"></ion-icon>
@@ -40,7 +40,7 @@
           </ion-item>
         </div>
 
-        <ion-button expand="block" class="sign-btn" shape="round">Sign In</ion-button>
+        <ion-button type="submit" expand="block" class="sign-btn" shape="round">Sign In</ion-button>
       </form>
 
       <div class="text-tag">

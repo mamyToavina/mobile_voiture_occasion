@@ -16,13 +16,15 @@ import { AdModule } from './ad/ad.module';
 import { UserAdsComponent } from './UserAds/UserAds.component';
 import { UserAdsValideComponent } from './userAdsValide/userAdsValide.component';
 import { UserAdsVenduComponent } from './userAdsVendu/userAdsVendu.component';
+import { NavigationComponent } from './Navigation/Navigation.component';
 
 @NgModule({
-  declarations: [					AppComponent,
+  declarations: [						AppComponent,
       LoginComponent,
       UserAdsComponent,
       UserAdsValideComponent,
-      UserAdsVenduComponent
+      UserAdsVenduComponent,
+      NavigationComponent
    ],
   imports: [
      BrowserModule,

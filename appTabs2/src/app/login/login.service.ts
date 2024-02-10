@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { jwtDecode } from 'jwt-decode';
+import { AppConstant } from '../AppConstant';
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +15,8 @@ export class LoginService {
   username : any;
   token!: string;
 
+  apiUrl = AppConstant.apiUrl;
+
   constructor(private http:HttpClient, private router : Router) { }
 
   public login(username : string, password : string){
@@ -22,8 +25,7 @@ export class LoginService {
     }
 
     let params = new HttpParams().set("username",username).set("password",password);
-    this.router.navigateByUrl("/admin");
-    return this.http.post("http://localhost:8080/test/login",params,options);
+    return this.http.post(`${this.apiUrl}/test/login`,params,options);
     
   }
 

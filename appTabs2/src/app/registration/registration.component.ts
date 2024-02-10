@@ -35,9 +35,11 @@ export class RegistrationComponent implements OnInit {
       this.userService.registerUser(user).subscribe({
         next : response => {
           console.log('Inscription réussie :', response);
+          alert("enregistré avec succes");
         },
         error : err => {
           console.error('Login error:', err);
+          alert("il y a erreur");
         }
       })
       console.log('Données du formulaire :', user);
